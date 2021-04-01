@@ -9,9 +9,12 @@ build-job:
 pages:
   stage: deploy
   script:
+  - ls
   - mkdir .public
   - cp -r * .public
   - mv .public public
+  - ls
+  - ls public
   artifacts:
     paths:
     - public

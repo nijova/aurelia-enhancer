@@ -1,9 +1,17 @@
 build-job:
   stage: build
   script:
-    - echo "Hello, $GITLAB_USER_LOGIN!"
+    - npm run build
 
-deploy-prod:
+pages:
   stage: deploy
   script:
-    - echo "This job deploys something from the $CI_COMMIT_BRANCH branch."
+  - mkdir .public
+  - cp /dist .public/dist
+  - cp *.html .public/
+  - mv .public public
+  artifacts:
+    paths:
+    - public
+  only:
+  - master

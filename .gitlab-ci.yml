@@ -5,12 +5,13 @@ pages:
   script:
   - npm install
   - npm run build
-  - ls
   - mkdir .public
-  - cp -r * .public
+  - mkdir .public/dist
+  - cp dist .public/dist
+  - mv _ENHANCE_THIS.html .public/index.html
   - mv .public public
-  - ls
   - ls public
+  - ls public/dist
   artifacts:
     paths:
     - public

@@ -10,8 +10,6 @@ pages:
   - cp dist/*.js .public/dist/
   - mv _ENHANCE_THIS.html .public/index.html
   - mv .public public
-  - ls public
-  - ls public/dist
   artifacts:
     paths:
     - public

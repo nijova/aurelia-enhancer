@@ -7,7 +7,7 @@ pages:
   - npm run build
   - mkdir .public
   - mkdir .public/dist
-  - cp dist .public/dist
+  - cp -r dist .public/dist
   - mv _ENHANCE_THIS.html .public/index.html
   - mv .public public
   - ls public
